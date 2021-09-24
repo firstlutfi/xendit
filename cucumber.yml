@@ -2,4 +2,4 @@
     common_requires = "--require app --require step_definitions --require pages"
 %>
 
-default: <%= common_requires %> --publish-quiet --format pretty --format html --out=report/features_reports.html
+default: <%= common_requires %> --publish-quiet --format pretty --format json --out=report/cucumber.json

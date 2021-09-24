@@ -8,6 +8,7 @@ gem 'capybara-screenshot'
 gem 'cucumber'
 gem 'data_magic', git: 'https://github.com/firstlutfi/data_magic.git', branch: 'master'
 gem 'dotenv'
+gem 'report_builder'
 gem 'rspec', '~> 3.5'
 gem 'rspec-expectations', '3.5.0'
 gem 'rubocop', '~> 1.21', require: false

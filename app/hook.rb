@@ -1,3 +1,5 @@
+require 'report_builder'
+
 Before do |scenario|
   @app = InitializePages.new
   @requirements = InitializeRequirements.new
@@ -22,4 +24,14 @@ After do |scenario|
   end
 
   TestrailHelper.new.update_testrail_result(scenario_id, scenario.status.to_s)
+end
+
+at_exit do
+  ReportBuilder.configure do |config|
+    config.input_path = 'report'
+    config.report_path = 'report/test_result'
+    config.report_types = [:html]
+    config.include_images = true
+  end
+  ReportBuilder.build_report
 end

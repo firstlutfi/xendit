@@ -31,6 +31,6 @@ Capybara::Screenshot.webkit_options = {
 }
 Capybara.save_path = "#{@report_path}/screenshots"
 puts ' ========Deleting old reports and logs========='
-FileUtils.rm_rf(@report_path, secure: true)
+FileUtils.rm_rf(Dir.glob("#{@report_path}/*"))
 FileUtils.mkdir_p @report_path
 Faker::Config.locale = 'id'
