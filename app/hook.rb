@@ -23,7 +23,7 @@ After do |scenario|
     end
   end
 
-  TestrailHelper.new.update_testrail_result(scenario_id, scenario.status.to_s)
+  TestrailHelper.new.update_testrail_result(scenario_id, scenario.status.to_s) unless scenario_id.eql? scenario.name
 end
 
 at_exit do

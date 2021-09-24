@@ -27,4 +27,3 @@ Feature: Create Virtual Account
     | case_id | virtual_account_detail            |
     | C3,C15  | virtual_account_invalid_bank_code |
     | C5,C17  | virtual_account_name_non_alphabet |
-

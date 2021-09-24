@@ -39,7 +39,7 @@ class TestrailHelper
       automated_status_uri = "update_case/#{id}"
       update_automated_status = update_to_testrail(@test_rail_file, automated_status_uri, automated)
       if update_automated_status.code.to_i != 200 && update_automated.body['error'].present?
-        @error_log_automated_status << update_automated.body['error']
+        @error_log_automated_status << update_automated_status.body['error']
       end
     end
   end
