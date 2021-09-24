@@ -1,0 +1,18 @@
+virtual_account_default:
+  external_id: demo_14754597758172
+  bank_code: ~randomize(['BNI','BCA','BRI','MANDIRI'])
+  name: ~full_name
+
+virtual_account_invalid_bank_code:
+  external_id: demo_14754597758172
+  bank_code: UOB
+  name: ~full_name
+  error_message: That bank code is not currently supported
+
+virtual_account_name_non_alphabet:
+  # key name should match the regex pattern [a-zA-Z0-9\s]+
+  external_id: demo_14754597758172
+  bank_code: UOB
+  name: ~merge(separator=' ', [name_prefix, full_name])
+  error_message: There was an error with the format submitted to the server.
+  error_detail: fails to match the required pattern
