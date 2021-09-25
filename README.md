@@ -3,6 +3,7 @@
 - install ruby (I use version 2.7.3)  
 - run ```gem install bundler``` if you've never done this previously  
 - run ```bundle install```  
+- rename or copy ```.env.sample``` to ```.env```
 - run ```cucumber```   
 
 ### Report  
